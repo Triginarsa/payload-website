@@ -5,13 +5,14 @@ import { Gutter } from '../../_components/Gutter'
 import { CMSLink } from '../../_components/Link'
 import { Media } from '../../_components/Media'
 import RichText from '../../_components/RichText'
+import { cn } from '../../_utilities/cn'
 
 import classes from './index.module.scss'
 
 export const HighImpactHero: React.FC<Page['hero']> = ({ richText, media, links }) => {
   return (
     <Gutter className={classes.hero}>
-      <div className={classes.content}>
+      <div className={cn(classes.content, 'text-blue-500')}>
         <RichText content={richText} />
         {Array.isArray(links) && links.length > 0 && (
           <ul className={classes.links}>
@@ -25,6 +26,7 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ richText, media, links 
           </ul>
         )}
       </div>
+      <div className="mt-3 text-red-500">This is Tailwind Styling!</div>
       <div className={classes.media}>
         {typeof media === 'object' && (
           <Fragment>
