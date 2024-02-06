@@ -2,11 +2,13 @@ const policies = {
   'child-src': ["'self'"],
   'media-src': [
     process.env.NEXT_PUBLIC_PAYLOAD_SERVER_URL,
+    'https://payload-supabase-tailwind-starter.vercel.app',
     'https://raw.githubusercontent.com',
     "'self'",
   ],
   'connect-src': [
     process.env.NEXT_PUBLIC_PAYLOAD_SERVER_URL,
+    'https://payload-supabase-tailwind-starter.vercel.app',
     "'self'",
     'https://maps.googleapis.com',
     'https://www.google-analytics.com',
@@ -36,15 +38,22 @@ const policies = {
   ],
   'frame-src': [
     process.env.NEXT_PUBLIC_PAYLOAD_SERVER_URL,
+    'https://payload-supabase-tailwind-starter.vercel.app',
     "'self'",
     'https://www.google.com',
     'https://*.youtube.com',
     'https://*.vercel.live',
     'https://vercel.live',
   ],
-  'form-action': [process.env.NEXT_PUBLIC_PAYLOAD_SERVER_URL, "'self'", 'https://www.google.com'],
+  'form-action': [
+    process.env.NEXT_PUBLIC_PAYLOAD_SERVER_URL,
+    'https://payload-supabase-tailwind-starter.vercel.app',
+    "'self'",
+    'https://www.google.com',
+  ],
   'img-src': [
     process.env.NEXT_PUBLIC_PAYLOAD_SERVER_URL,
+    'https://payload-supabase-tailwind-starter.vercel.app',
     "'self'",
     'https://www.googletagmanager.com',
     'https://raw.githubusercontent.com',
@@ -59,6 +68,7 @@ const policies = {
   ],
   'script-src': [
     process.env.NEXT_PUBLIC_PAYLOAD_SERVER_URL,
+    'https://payload-supabase-tailwind-starter.vercel.app',
     "'self'",
     "'unsafe-inline'",
     "'unsafe-eval'",
