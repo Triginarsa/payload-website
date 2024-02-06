@@ -1,6 +1,10 @@
 const policies = {
   'child-src': ["'self'"],
-  'media-src': [process.env.NEXT_PUBLIC_PAYLOAD_SERVER_URL, "'self'"],
+  'media-src': [
+    process.env.NEXT_PUBLIC_PAYLOAD_SERVER_URL,
+    'https://raw.githubusercontent.com',
+    "'self'",
+  ],
   'connect-src': [
     process.env.NEXT_PUBLIC_PAYLOAD_SERVER_URL,
     "'self'",
@@ -43,6 +47,7 @@ const policies = {
     process.env.NEXT_PUBLIC_PAYLOAD_SERVER_URL,
     "'self'",
     'https://www.googletagmanager.com',
+    'https://raw.githubusercontent.com',
     'www.w3.org',
     'data:',
     'https://maps.gstatic.com',
